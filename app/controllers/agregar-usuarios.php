@@ -11,7 +11,6 @@ if ($_SESSION["web"]== true) {
 
 ?>
 
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
