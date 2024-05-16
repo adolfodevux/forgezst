@@ -1,63 +1,121 @@
+        .contenedor {
+            max-width: 300px;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-right: 20px;
+            margin-top: 100px;
+            margin-left: -50px  ;
+            /* Add space between form and table */
+        }
 
-.contenedor {
-    width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #f0f0f0;
-    border-radius: 22px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f9f9f9;
-}
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            /* Adjusted font size */
+            color: #000;
+        }
 
-label {
-    font-weight: bold;
-}
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #666;
+            border-radius: 20px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            color: #000;
+            background-color: #fff;
+        }
 
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-    
-}
-button {
-    background-color: #3087e3;
-    color: white;
-    border: none;
-    border-radius: 52px;
-    margin-top: 45px;
-    width: 100%;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-  
-}
+        input[type="text"]:hover,
+        input[type="password"]:hover,
+        select:hover {
+            border-color: #aaa;
+        }
 
-button:hover {
-    background-color: #005fc5;
-}
-select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        select:focus {
+            border-color: #000;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
 
+        button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 52px;
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
 
-a {
-    cursor: pointer;
-    text-decoration: none;
-    color: #3087e3;
-}
+        button:hover {
+            background-color: #000;
+            transform: scale(1.05);
+        }
 
-a:hover {
-    color: #005fc5;
-}
+        a {
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            transition: all 0.3s ease;
+        }
 
+        a:hover {
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .table-container {
+            flex: 1;
+        }
+
+        .table-dark {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .table-dark th,
+        .table-dark td {
+            border-color: #555;
+        }
+
+        .table-dark thead th {
+            background-color: #444;
+        }
+
+        .btn-primary {
+            background-color: #000;
+            border-color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: #444;
+            border-color: #444;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .table-responsive {
+            max-width: 800px;
+            /* Adjust the max-width of the table */
+        }

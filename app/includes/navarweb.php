@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="../../app/css/nav.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <nav>
 <a href="../views/dashboard.php">
@@ -38,4 +38,4 @@
   </ul>
 </nav>
 <script src="../js/about.js"></script>
-<link rel="stylesheet" href="../../app/css/nav.css">
+

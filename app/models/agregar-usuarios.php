@@ -8,7 +8,7 @@ if ($_POST) {
     $usuario = md5($_POST['usuario']); 
     $contrasenia = md5($_POST['contrasenia']); 
     $tipoUsuario = $_POST['tipoUsuario'];
-    $fechaRegistro = date("d-m-y");
+    $fechaRegistro = date("y-m-d");
 
     $verificarUsuario = "SELECT * FROM usuarios WHERE usuario = '$usuario'";
     $result = $conn->query($verificarUsuario);
