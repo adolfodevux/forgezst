@@ -9,7 +9,8 @@
         if (!$conn) {
             echo "<div class='alert alert-danger' role='alert'>Error de conexión</div>";
         } else {
-            $sql = "SELECT id, nombre, apellidos, tipoUsuario, fechaRegistro, estatus FROM usuarios WHERE nombre LIKE '%$id%' ";
+            $sql = "SELECT id, nombre, apellidos, tipoUsuario, fechaRegistro, estatus FROM usuarios
+               WHERE id LIKE '%$id%' OR nombre LIKE '%$id%' ";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 echo "<div class='table-responsive'>";

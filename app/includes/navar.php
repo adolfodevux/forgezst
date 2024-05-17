@@ -11,7 +11,7 @@
             <a href=" #"><i class="fas fa-boxes"></i> Inventario</a>
             <ul>
                 <li><a href="../controllers/agregar-products.php">Agregar Inventario</a></li>
-                <li><a href="#">Consultar Inventario</a></li>
+                <li><a href="../controllers/consultar-products.php">Consultar Inventario</a></li>
                 <li><a href="#">Agregar Stock</a></li>
                 <li><a href="#">Consultar Stocks</a></li>
                 <li><a href="#">Consultar por Categorías</a></li>
@@ -39,18 +39,6 @@
                 <li><a href="#">Administrar Categorías</a></li>
             </ul>
         </li>
-
-        <!-- Categorías y Zonas Section -->
-        <li>
-            <a href="#"><i class="fas fa-map-marked-alt"></i> Categorías y Zonas</a>
-            <ul>
-                <li><a href="#">Agregar Categoría</a></li>
-                <li><a href="#">Consultar Categoría</a></li>
-                <li><a href="#">Agregar Zona</a></li>
-                <li><a href="#">Consultar Zona</a></li>
-            </ul>
-        </li>
-
         <!-- Usuarios Section -->
         <li>
             <a href="#"><i class="fas fa-users"></i> Usuarios</a>

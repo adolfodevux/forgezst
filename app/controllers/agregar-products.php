@@ -15,7 +15,6 @@ if ($_SESSION["web"] == true) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Registro de Productos</title>
 </head>
@@ -25,12 +24,12 @@ if ($_SESSION["web"] == true) {
     <br>
     <div class="contenedor">
         <h2>Registro de Productos</h2>
-        <form id="form" action="" method="post">
+        <form id="form" action="" method="post" enctype="multipart/form-data">
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" required><br>
 
-            <label for="apellidos">Precio:</label><br>
-            <input type="text" id="apellidos" name="apellidos" required placeholder="$1000.00"><br>
+            <label for="precio">Precio:</label><br>
+            <input type="text" id="precio" name="precio" required placeholder="$1000.00"><br>
 
             <label for="categoria">Categoria:</label><br>
             <select id="tipocategoria" name="tipocategoria" required>
@@ -38,19 +37,18 @@ if ($_SESSION["web"] == true) {
                 <option value="Diseño">Diseño</option>
             </select>
 
-            <label for="description">Descripcion:</label><br>
-            <textarea name="comentarios" rows="5" cols="35" id="comentarios" class="no-resize"
+            <label for="descripcion">Descripcion:</label><br>
+            <textarea name="descripcion" rows="5" cols="35" id="descripcion" class="no-resize"
                 placeholder="sdsa"></textarea>
+
             <label for="imagen">Imagen de vista previa:</label>
             <input type="file" name="imagen">
 
-
             <br>
-            <button type="button" onclick="verificar()">Agregar y enviar</button>
-            <?php include "../../app/models/agregar-usuarios.php"; ?>
+            <button type="submit">Agregar y enviar</button>
         </form>
     </div>
-
+    <?php include "../../app/models/agregar-productos.php"; ?>
     <script src="../../app/js/form.js"></script>
 </body>
 
