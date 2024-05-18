@@ -50,6 +50,7 @@ if ($_SESSION["web"] == true) {
         <p>ID del usuario: <?php echo htmlspecialchars($idn); ?></p>
         <form id="form" action="" method="post">
             <input type="hidden" name="id" value="<?php echo $idn; ?>">
+            
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" value="<?php echo $nombre; ?>" required><br>
 

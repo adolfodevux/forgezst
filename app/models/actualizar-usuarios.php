@@ -3,7 +3,7 @@
 if ($_POST) {
 
    
-    require_once '..//database/main.php'; 
+    require_once '../database/main.php'; 
 
     $id = $_POST['id'];
     $nombre = $_POST['nombre'];
@@ -31,7 +31,6 @@ if ($_POST) {
 
     if (mysqli_query($conn, $sql)) {
         echo "<script src='../../app/js/success.js'></script>";
-        $id = $_POST['id'];
        
       
     } else {

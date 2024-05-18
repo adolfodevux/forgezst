@@ -1,38 +1,34 @@
 <?php
 
 if ($_POST) {
-    require_once '../database/main.php';
+    require_once '../database/main.php'; 
 
-    $id_producto = $_POST['id_producto'];
+    // Asignar valores a las variables
+    $id = $_POST['idp'];
     $nombre = $_POST['nombre'];
     $precio = $_POST['precio'];
     $categoria = $_POST['categoria'];
     $descripcion = $_POST['descripcion'];
-    $nueva_imagen = $_FILES['imagen'];
+    $nueva_imagen = $_FILES['imagen']['name'];
+    $tipo_imagen = $_FILES['imagen']['type'];
+    $tamaño_imagen = $_FILES['imagen']['size'];
+    $datos_imagen = file_get_contents($_FILES['imagen']['tmp_name']);
 
-    // Comprobación si se subió una nueva imagen
-    if (!empty($nueva_imagen['name'])) {
-        // Procesamiento de la nueva imagen
-        $tipoImagen = $nueva_imagen['type'];
-        $datosImagen = file_get_contents($nueva_imagen['tmp_name']);
-        $datosImagen = base64_encode($datosImagen);
+    // Construir la consulta SQL de actualización
+    $sql = "UPDATE productos SET nombre = '$nombre', precio = '$precio', categoria = '$categoria', descripcion = '$descripcion' Where  idproducto = $id" ;
 
-        // Actualización de la base de datos con la nueva imagen
-        $sql = "UPDATE productos 
-                SET nombre = '$nombre', precio = '$precio', categoria = '$categoria', descripcion = '$descripcion',
-                    tipo_imagen = '$tipoImagen', datos_imagen = '$datosImagen' 
-                WHERE idproducto = $id_producto";
-    } else {
-        // Actualización sin modificar la imagen
-        $sql = "UPDATE productos 
-                SET nombre = '$nombre', precio = '$precio', categoria = '$categoria', descripcion = '$descripcion' 
-                WHERE idproducto = $id_producto";
-    }
-
+    
+    // Ejecutar la consulta SQL
     if (mysqli_query($conn, $sql)) {
         echo "<script src='../../app/js/success.js'></script>";
     } else {
-        // Manejo de error
+        echo "Error al ejecutar la consulta SQL: " . mysqli_error($conn);
+        echo "<br>";
+        echo "id".$id;
+        echo "<br>";
+        echo "sql:".$sql;
     }
+
+    // Cerrar la conexión a la base de datos
     mysqli_close($conn);
 }
