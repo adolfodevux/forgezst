@@ -24,7 +24,7 @@ if ($_SESSION["web"] == true) {
     <br>
     <div class="contenedor">
         <h2>Registro de Productos</h2>
-        <form id="form" action="" method="post" enctype="multipart/form-data">
+        <form id="add-producto-form" action="" method="post" enctype="multipart/form-data">
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" required><br>
 
@@ -50,6 +50,7 @@ if ($_SESSION["web"] == true) {
     </div>
     <?php include "../../app/models/agregar-productos.php"; ?>
     <script src="../../app/js/form.js"></script>
+
 </body>
 
 </html>

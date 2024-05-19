@@ -5,29 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dwD5g8FVw0P8A/izVd9JOTwe1LMFMyKj3ptUaaVU4wBwhZlB5H6F5zAS54NtkvXjz1Li2DUqQTdfeRvi2yE9yw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Forgezst</title>
+    <link rel="shortcut icon" href="../assets/img/LogoFST-black.png" type="image/x-icon">
+    <title>ForgezST - Login</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Cambia este color de fondo según tus preferencias */
+        }
+
         .contenedor {
             max-width: 300px;
             padding: 20px;
             border: 1px solid #333;
             border-radius: 22px;
-            font-family: Arial, Helvetica, sans-serif;
             background-color: #fff;
-            transition: all 0.3s ease;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            margin: 0 auto; /* Add this line to center the div */
         }
 
-        h1 {
+        p {
             text-align: center;
             font-weight: bold;
-            font-size: 40px;
+            margin: 3;
             color: #000;
         }
 
         input[type="text"],
-        select,
         input[type="password"] {
             width: calc(100% - 16px);
             padding: 8px;
@@ -42,13 +50,11 @@
         }
 
         input[type="text"]:hover,
-        select:hover,
         input[type="password"]:hover {
             border-color: #aaa;
         }
 
         input[type="text"]:focus,
-        select:focus,
         input[type="password"]:focus {
             border-color: #000;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -85,14 +91,20 @@
             color: #000;
             transform: translateY(-3px);
         }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px; /* Ajusta el ancho según sea necesario */
+            height: 100px; /* Ajusta la altura según sea necesario */
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-
-    <img src="../assets/img/logolg.svg" alt="Logotipo ForgezST Black">
-       
     <div class="contenedor">
-        <h1>Inicia sesión</h1>
+        <img src="../assets/img/LogoFST-black.png" alt="Logotipo ForgezST Black" class="logo">
+        <p>Inicia sesión</p>
         <form action="../models/login.php" method="post">
             <label><i class="fas fa-user"></i> Nombre de usuario:</label>
             <input type="text" id="usuario" name="usuario" required><br>
@@ -133,6 +145,5 @@
             });
         </script>
     <?php endif; ?>
-
 </body>
 </html>

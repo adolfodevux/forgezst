@@ -1,8 +1,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="../css/navar.css">
+<style>
+nav .logo {
+    margin-left: 20px;
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+}
+</style>
 <nav>
     <a href="../../app/views/dashboard.php" class="logo-container">
-        <img src="../assets/img/logo.png" alt="logo" class="logo">
+        <img src="../assets/img/Logofst.png" alt="logo" class="logo">
     </a>
     <ul>
         <!-- Lista de elementos del menú -->
@@ -14,7 +21,6 @@
                 <li><a href="../controllers/consultar-products.php">Consultar Inventario</a></li>
                 <li><a href="#">Agregar Stock</a></li>
                 <li><a href="#">Consultar Stocks</a></li>
-                <li><a href="#">Consultar por Categorías</a></li>
             </ul>
         </li>
 
@@ -22,7 +28,6 @@
         <li>
             <a href="#"><i class="fas fa-shopping-cart"></i> Ventas</a>
             <ul>
-                <li><a href="#">Registrar Venta</a></li>
                 <li><a href="#">Consultar Ventas</a></li>
                 <li><a href="#">Consultar Compras</a></li>
                 <li><a href="#">Consultar por Usuario</a></li>
