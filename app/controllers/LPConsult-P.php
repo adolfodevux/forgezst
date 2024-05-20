@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/wlstyles.css">
-    <link rel="shortcut icon" href="../../assets/img/LogoFST-black.png" type="image/x-icon">
-    <title>ForgezST - Tienda</title>
+    <link rel="stylesheet" href="../css/wlstyles.css">
+    <link rel="stylesheet" href="../css/button.css">k
+    <link rel="stylesheet" href="../css/scrolbar.css">
+    <link rel="shortcut icon" href="../assets/img/LogoFST-black.png" type="image/x-icon">
+    <title>ForgezST - Tienda (Productos)</title>
     <style>
         .card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
+            background-color: black;
         }
         .productos-container {
-            padding: 20px;
+            padding: 198px;
+             margin-top: 5px; 
         }
         .row {
             display: none;
@@ -68,14 +72,15 @@
             border: none;
             cursor: pointer;
         }
-        main h1{
-            margin-top: -300px;
+        .iftx{
+           text-align: center;
+           margin-top: -500px;
         }
     </style>
 </head>
 <body>
 
-<?php include("../../includes/navbarst.php"); ?>
+<?php include("../includes/navbarst.php"); ?>
 
 <header>
     <div class="wave">
@@ -83,13 +88,13 @@
         <p>Aqui podras ver el listado de productos con los que contamos  <br>y puedas ver si son de tu agrado u <br> deceas comprarlos</p>
     </div>
 </header>
+<div class="iftx">
+    <h1>Nuestros productos</h1>
+</div>
 
-<br>
-<br>
-<br>
-
-
-<?php include("../../models/LandiPag/get_productos.php") ?>
+<?php
+include("../models/LPget_productos.php");
+?>
 
 <div class="container productos-container">
     <?php if (!empty($productos)): ?>
@@ -104,6 +109,7 @@
                                 <p class="card-text" style="font-style: oblique;">Descripcion: <br> <?php echo htmlspecialchars($producto['descripcion']); ?></p>
                                 <p class="card-text"><strong>Precio:</strong> $<?php echo htmlspecialchars($producto['precio']); ?></p>
                                 <p class="card-text"><strong>Categoría:</strong> <?php echo htmlspecialchars($producto['categoria']); ?></p>
+                                <button>Comprar</button>
                             </div>
                         </div>
                     </div>
@@ -122,12 +128,6 @@
         <?php endfor; ?>
     <?php endif; ?>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <script>
     function showPage(pageIndex) {
@@ -141,6 +141,7 @@
         });
     }
 </script>
+<br><br><br>
 <footer class="footer">
     <div class="container">
         <p>&copy; 2024 ForgezST. Todos los derechos reservados.</p>

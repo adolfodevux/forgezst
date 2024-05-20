@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "rintoj.blank-line-organizer"
+        "rintoj.blank-line-organizer",
+        "icrawl.discord-vscode"
     ]
 }

@@ -27,7 +27,7 @@
     <li id="parame"><a href="#"><i class="fa-solid fa-shop"></i> Productos</a>
       <ul>
 
-        <li><a href="../controllers/LandiPages/consultar-product.php">Consultar Productos</a></li>
+        <li><a href="../controllers/LPConsult-P.php">Consultar Productos</a></li>
         <li><a href="#">Consultar por Categoria</a></li>
       </ul>
     </li>

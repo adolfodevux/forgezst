@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION["web"] == false) {
+if ($_SESSION["web"] == true) {
     header("Location: ../views/404.php");
     exit;
 } else if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {

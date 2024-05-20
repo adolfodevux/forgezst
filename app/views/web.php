@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/img/LogoFST-black.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/scrolbar.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/wlstyles.css">
     <title>ForgezST - Tienda</title>
@@ -55,7 +56,7 @@
                                    <div class="cardCol2">
                         <div class="row">
                             <div class="col-6">
-                                <p>Total de productos</p>
+                                <p>Total de Clientes</p>
                                 <h5>10</h5>
                             </div>
                             <div class="col-6 centerItem">
@@ -72,7 +73,7 @@
     </main>
     <br>
     <br>
-    <br><br><br><br>
+    <br><br><br><br><br><br><br>
 <footer class="footer">
     <div class="container">
         <p>&copy; 2024 ForgezST. Todos los derechos reservados.</p>
