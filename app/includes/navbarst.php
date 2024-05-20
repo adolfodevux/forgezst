@@ -19,7 +19,7 @@
 }
 </style>
 <nav>
-<a href="../views/dashboard.php" class="logo-container">
+<a href="../views/web.php" class="logo-container">
       <img src="../assets/img/LogoFST.png" alt="logo" class="logo">
 </a>
 
