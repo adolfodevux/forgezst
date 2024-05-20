@@ -1,28 +1,16 @@
 <?php
 session_start();
-
-// Verificar si el usuario está en la sesión
-if(isset($_SESSION['usuario'])){
-    // Mantener el nombre de usuario encriptado con MD5
-    $usuario = $_SESSION['usuario'];
-} else {
-    $usuario = null;
-}
-
-
-if ($_SESSION["web"] == true) {
-    header("Location: ../../views/404.php");
+if ($_SESSION["web"] == false) {
+    header("Location: ../views/404.php");
     exit;
 } else if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
-    header("Location: ../../app/index.php");
+    header("Location: ../app/index.php");
     exit;
 }
 
 if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== true) {
     $_SESSION['script_ejecutado'] = false;
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -30,18 +18,17 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php if ($_SESSION['script_ejecutado'] === false): ?>
         <script src="../js/main.js"></script>
         <?php $_SESSION['script_ejecutado'] = true; ?>
     <?php endif; ?>
-    <link rel="shortcut icon" href="../assets/img/LogoFST-black.png" type="image/x-icon">
-    <title>Dashboard - Inicio</title>
+    <title>ForgezST - Dashboard</title>
 </head>
 <body>
-<?php include_once '../includes/navar.php'; ?><br><br><br><br>
+<?php include_once '../includes/navar.php'; ?>
 
 
 <div class="container mt-5">

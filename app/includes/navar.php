@@ -5,9 +5,18 @@ nav .logo {
     margin-left: 20px;
     width: 70px; /* Adjust the width as needed */
     height: 70px; /* Adjust the height as needed */
+}#sett i{
+    margin: 7px;
+}#sett{
+margin-left: 500px;
+}#param i{
+    margin: 7px;
+
+}#param{
+    margin: 0;
 }
 </style>
-<nav>
+<nav id="param">
     <a href="../../app/views/dashboard.php" class="logo-container">
         <img src="../assets/img/Logofst.png" alt="logo" class="logo">
     </a>
@@ -65,7 +74,7 @@ nav .logo {
         </li>
 
         <!-- Ajustes Section -->
-        <li>
+        <li id="sett">
             <a href="#"><i class="fas fa-cogs"></i> Ajustes</a>
             <ul>
                 <li><a href="#">Mi Perfil</a></li>
@@ -76,3 +85,4 @@ nav .logo {
         </li>
     </ul>
 </nav>
+

@@ -11,7 +11,7 @@
     height: 60px; /* Adjust the height as needed */
 }
 #perf{
-  margin-left: 900px;
+  margin-left: 700px;
 }#perf i{
   margin: 7px;
 }#parame i{
@@ -20,7 +20,7 @@
 </style>
 <nav>
 <a href="../views/dashboard.php" class="logo-container">
-      <img src="../app/assets/img/Logofst.png" alt="logo" class="logo">
+      <img src="../assets/img/LogoFST.png" alt="logo" class="logo">
 </a>
 
   <ul>
@@ -37,11 +37,18 @@
         <li><a href="#">Consultar Categoria</a></li>
       </ul>
     </li>
+    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Compras</a>
+      <ul>
+        <li><a href="#">Consultar Compras</a></li>
+        <li><a href="#">Compras Pendientes</a></li>
+        <li><a href="#">Rembolsos</a></li>
+      </ul>
+    </li> 
 
     <li id="perf"><a href="#"><i class="fa-solid fa-sliders"></i>Ajustes</a>
       <ul>
         <li><a href="#">About</a></li>
-        <li><a href="../app/views/logeo.php">Iniciar Sesión</a></li>
+        <li><a href="../../app/index.php">Cerrar Sesión</a></li>
       </ul>
     </li>
   </ul>
