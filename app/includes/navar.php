@@ -1,20 +1,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="../css/navar.css">
 <style>
-nav .logo {
-    margin-left: 20px;
-    width: 70px; /* Adjust the width as needed */
-    height: 70px; /* Adjust the height as needed */
-}#sett i{
-    margin: 7px;
-}#sett{
-margin-left: 500px;
-}#param i{
-    margin: 7px;
+    nav .logo {
+        margin-left: 20px;
+        width: 70px;
+        /* Adjust the width as needed */
+        height: 70px;
+        /* Adjust the height as needed */
+    }
 
-}#param{
-    margin: 0;
-}
+    #sett i {
+        margin: 7px;
+    }
+
+    #param i {
+        margin: 7px;
+
+    }
+
+    #param {
+        margin: 0;
+    }
 </style>
 <nav id="param">
     <a href="../../app/views/dashboard.php" class="logo-container">
@@ -85,4 +91,3 @@ margin-left: 500px;
         </li>
     </ul>
 </nav>
-

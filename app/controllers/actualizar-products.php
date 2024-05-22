@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+if (isset($_SESSION['nombre'])) {
+    $usuario = $_SESSION['nombre'];
+} else {
+    $usuario = "null";
+}
+
+if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== true) {
+    $_SESSION['script_ejecutado'] = false;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

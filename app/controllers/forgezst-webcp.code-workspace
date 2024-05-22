@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../www.crel.es"
+		},
+		{
+			"path": "../../../safe/app/AI"
+		}
+	],
+	"settings": {}
+}

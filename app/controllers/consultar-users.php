@@ -1,13 +1,17 @@
 <?php
 session_start();
-if ($_SESSION["web"] == true) {
-    header("Location: ../../views/404.php");
-    exit;
-} else if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
-    header("Location: ../../app/index.php");
-    exit;
+
+if (isset($_SESSION['nombre'])) {
+    $usuario = $_SESSION['nombre'];
+} else {
+    $usuario = "null";
+}
+
+if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== true) {
+    $_SESSION['script_ejecutado'] = false;
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">

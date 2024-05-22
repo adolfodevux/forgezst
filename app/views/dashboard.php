@@ -1,11 +1,10 @@
 <?php
 session_start();
-if ($_SESSION["web"] == true) {
-    header("Location: ../views/404.php");
-    exit;
-} else if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
-    header("Location: ../app/index.php");
-    exit;
+
+if (isset($_SESSION['nombre'])) {
+    $usuario = $_SESSION['nombre'];
+} else {
+    $usuario = "null";
 }
 
 if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== true) {
@@ -30,11 +29,10 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
 <body>
 <?php include_once '../includes/navar.php'; ?>
 
-
 <div class="container mt-5">
     <div class="tex">
-    <h1 class="text-center mb-4"><b>Vista del Panel</b></h1>
-    <h4 class="text-center">Bienvenido, <?php echo $usuario ?></h4>
+        <h1 class="text-center mb-4"><b>Vista del Panel</b></h1>
+        <h4 class="text-center">Bienvenido, <?php echo $usuario ?></h4>
     </div>
     <br><br>
     <div class="row">
@@ -54,7 +52,8 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
                             </div>
                         </div>
                     </div>
-                </div><br><br>
+                </div>
+                <br><br>
                 <div class="col-6 mb-4">
                     <div class="cardCol">
                         <div class="row">
@@ -88,7 +87,8 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
                             </div>
                         </div>
                     </div>
-                </div><br><br>
+                </div>
+                <br><br>
                 <div class="col-6 mb-4">
                     <div class="cardCol">
                         <div class="row">
@@ -107,14 +107,13 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
             </div>
         </div>
     </div>
-    <br>
-    <br>
-
+    <br><br>
 </div>
 <div class="ft">
     <h5>Bienvenido al panel de administración de la tienda virtual. <br>
-    Aquí puedes agregar usuarios y productos fácilmente para mantener tu tienda actualizada y funcionando sin problemas. </h5>
-    </div>
+        Aquí puedes agregar usuarios y productos fácilmente para mantener tu tienda actualizada y funcionando sin problemas.
+    </h5>
+</div>
 </body>
 </html>
 <style>
@@ -128,25 +127,23 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
 }
 
 .container h1 {
-    margin-bottom: 0px; /* Reduce el margen inferior del h1 */
+    margin-bottom: 0px;
 }
 
 .container h4 {
-    margin-top: 0px; /* Reduce el margen superior del h4 */
+    margin-top: 0px;
 }
 
 .cardCol {
     border: 1px solid #dee2e6;
     border-radius: 0.25rem;
-    margin-bottom: 10px; /* Aumenta el margen inferior */
+    margin-bottom: 10px;
     padding: 10px;
     background-color: #fff;
     justify-content: center;
-    width: 100%; /* Haz que las cards ocupen todo el ancho */
+    width: 100%;
 }
-.cal2{
-    margin: 0;
-}
+
 .cardLogo {
     width: 80px;
     height: 80px;
@@ -167,14 +164,14 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
     margin-top: 20px;
 }
 
-/* Estilos para pantallas más pequeñas */
 @media (max-width: 768px) {
     .contenedor {
         margin-left: 10px;
         margin-top: 10px;
     }
 }
-.ft h5{
+
+.ft h5 {
     font-family: 'Poppins', sans-serif;
     font-size: medium;
     text-align: center;

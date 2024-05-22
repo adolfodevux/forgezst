@@ -1,15 +1,17 @@
 <?php
 session_start();
-if ($_SESSION["web"] == true) {
-    header("Location: ../../app/views/404.php");
-    exit;
 
-} else if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
-    header("Location: ../../app/index.php");
-    exit;
+if (isset($_SESSION['nombre'])) {
+    $usuario = $_SESSION['nombre'];
+} else {
+    $usuario = "null";
 }
 
+if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== true) {
+    $_SESSION['script_ejecutado'] = false;
+}
 ?>
+
 
 
 <!DOCTYPE html>
@@ -50,7 +52,7 @@ if ($_SESSION["web"] == true) {
         <p>ID del usuario: <?php echo htmlspecialchars($idn); ?></p>
         <form id="form" action="" method="post">
             <input type="hidden" name="id" value="<?php echo $idn; ?>">
-            
+
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" value="<?php echo $nombre; ?>" required><br>
 
@@ -92,8 +94,7 @@ if ($_SESSION["web"] == true) {
 
 <script src="../../app/js/form.js"></script>
 <style>
-
-.contenedor {
+    .contenedor {
         max-width: 300px;
         padding: 20px;
         border: 1px solid #333;
