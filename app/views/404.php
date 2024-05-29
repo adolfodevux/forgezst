@@ -20,25 +20,3 @@
    </div>
 </body>
 </html>
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
-    body{
-        font-family: 'Poppins', sans-serif;
-        max-width: 1200;
-    }
-    h4{
-        font-size: 50px;
-color: red;
-text-align: center;
-}
-p{
-        font-size: 25px;
-font-weight: bolder;
-text-align: center;
-}
-.contenedor{
-    margin-top: 200px;
-    margin-left: 550px;
-}
-</style>

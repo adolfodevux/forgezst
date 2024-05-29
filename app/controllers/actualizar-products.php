@@ -19,6 +19,7 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/controllers.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="../css/forms.css">
     <title>Registro de Productos</title>
@@ -91,84 +92,6 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
 </body>
 
 <script src="../../app/js/form.js"></script>
-<style>
-    .contenedor {
-        max-width: 300px;
-        padding: 20px;
-        border: 1px solid #333;
-        border-radius: 22px;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #fff;
-        transition: all 0.3s ease;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        margin: 30px auto;
-    }
 
-    h2 {
-        text-align: center;
-        font-weight: bold;
-        font-size: 24px;
-        color: #000;
-    }
-
-    input[type="text"],
-    select,
-    textarea {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        border: 1px solid #666;
-        border-radius: 20px;
-        box-sizing: border-box;
-        transition: all 0.3s ease;
-        color: #000;
-        background-color: #fff;
-    }
-
-    input[type="text"]:hover,
-    select:hover,
-    textarea:hover {
-        border-color: #aaa;
-    }
-
-    input[type="text"]:focus,
-    select:focus,
-    textarea:focus {
-        border-color: #000;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    }
-
-    button {
-        background-color: #000;
-        color: #fff;
-        border: none;
-        border-radius: 52px;
-        margin-top: 20px;
-        width: 100%;
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: all 0.3s ease;
-    }
-
-    button:hover {
-        background-color: #000;
-        transform: scale(1.05);
-    }
-
-    a {
-        cursor: pointer;
-        text-decoration: none;
-        color: #000;
-        transition: all 0.3s ease;
-    }
-
-    a:hover {
-        color: #000;
-        transform: translateY(-3px);
-    }
-</style>
 
 </html>

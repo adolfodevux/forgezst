@@ -4,26 +4,34 @@
 <style>
   nav i {
     margin-left: 2px;
+    font-size: 16px;
   }
 
   nav .logo {
     margin-left: 20px;
-    width: 60px;
+    width: 50px;
     /* Adjust the width as needed */
-    height: 60px;
+    height: 50px;
     /* Adjust the height as needed */
   }
 
   #perf {
-    margin-left: 600px;
+    margin-left: 800px;
+    font-size: 12px;
   }
 
   #perf i {
     margin: 7px;
+    font-size: x-small;
   }
 
   #parame i {
     margin: 7px;
+    font-size: x-small;
+  }
+
+  #parame {
+    font-size: 12px;
   }
 </style>
 <nav>
@@ -40,25 +48,20 @@
       </ul>
     </li>
 
-    <li id="parame"><a href="#"><i class="fa-solid fa-layer-group"></i> Categorias</a>
-      <ul <li><a href="#">Consultar Categoria</a>
     </li>
-  </ul>
-  </li>
-  <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Compras</a>
-    <ul>
-      <li><a href="#">Consultar Compras</a></li>
-      <li><a href="#">Compras Pendientes</a></li>
-      <li><a href="#">Rembolsos</a></li>
-    </ul>
-  </li>
+    <li id="parame"><a href="#"><i class="fa-solid fa-cart-shopping"></i> Compras</a>
+      <ul>
+        <li><a href="#">Consultar Compras</a></li>
+        <li><a href="#">Compras Pendientes</a></li>
+      </ul>
+    </li>
 
-  <li id="perf"><a href="#"><i class="fa-solid fa-sliders"></i>Ajustes</a>
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="../../app/index.php">Cerrar Sesión</a></li>
-    </ul>
-  </li>
+    <li id="perf"><a href="#"><i class="fa-solid fa-sliders"></i>Ajustes</a>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="../../app/index.php">Cerrar Sesión</a></li>
+      </ul>
+    </li>
   </ul>
 
 </nav>

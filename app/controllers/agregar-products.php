@@ -41,6 +41,10 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
                 <option value="Diseño">Diseño</option>
             </select>
 
+            <label for="technologies">Tecnologias:</label><br>
+            <input type="text" id="precio" name="precio" required placeholder="Java • Css • JS"
+                value="Java • Html • PHP"><br>
+
             <label for="descripcion">Descripcion:</label><br>
             <textarea name="descripcion" rows="5" cols="35" id="descripcion" class="no-resize"
                 placeholder="sdsa"></textarea>

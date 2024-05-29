@@ -24,6 +24,16 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
     <link rel="shortcut icon" href="../assets/img/LogoFST-black.png" type="image/x-icon">
     <title>ForgezST - Tienda (Productos)</title>
     <style>
+        .contenwave {
+            margin-top: -1320px;
+            margin-left: -860px;
+            font-size: small;
+        }
+
+        .contenwave button {
+            font-size: x-small;
+        }
+
         .card img {
             width: 100%;
             height: 200px;
@@ -102,6 +112,14 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
             text-align: center;
             margin-top: -500px;
         }
+
+        .tec {
+            color: gray;
+        }
+
+        .card-title {
+            margin-left: -10px;
+        }
     </style>
 </head>
 
@@ -110,7 +128,7 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
     <?php include ("../includes/navbarst.php"); ?>
 
     <header>
-        <div class="wave">
+        <div class="contenwave">
             <h1>Obtenga nuestro <br> Listado de productos<br> Aqui</h1>
             <p>Aqui podras ver el listado de productos con los que contamos <br>y puedas ver si son de tu agrado u <br>
                 deceas comprarlos</p>
@@ -142,6 +160,10 @@ if (!isset($_SESSION['script_ejecutado']) || $_SESSION['script_ejecutado'] !== t
                                         $<?php echo htmlspecialchars($producto['precio']); ?></p>
                                     <p class="card-text"><strong>Categoría:</strong>
                                         <?php echo htmlspecialchars($producto['categoria']); ?></p>
+                                    <p class="card-text"><strong></strong>
+                                    <div class="tec">
+                                        <?php echo htmlspecialchars($producto['tecnologias']); ?></p>
+                                    </div>
                                     <button>Comprar</button>
                                 </div>
                             </div>
